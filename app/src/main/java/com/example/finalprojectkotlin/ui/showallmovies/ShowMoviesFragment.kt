@@ -46,6 +46,9 @@ class ShowMoviesFragment:Fragment() {
             note.setTextMaxLines(4)
             note.show()
         }
+        binding.btnApi.setOnClickListener{
+            findNavController().navigate(R.id.action_showMoviesFragment_to_apiFragment)
+        }
 
         return binding.root
     }
