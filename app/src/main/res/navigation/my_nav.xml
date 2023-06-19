@@ -84,23 +84,25 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.finalprojectkotlin.ui.LoginFragment"
+        android:name="com.example.finalprojectkotlin.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_showMoviesFragment"
             app:destination="@id/showMoviesFragment" />
     </fragment>
     <fragment
-        android:id="@+id/signUpFragment"
-        android:name="com.example.finalprojectkotlin.ui.SignUpFragment"
-        android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        android:id="@+id/registerFragment"
+        android:name="com.example.finalprojectkotlin.ui.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
         <action
-            android:id="@+id/action_signUpFragment_to_loginFragment"
+            android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+
+
 </navigation>
