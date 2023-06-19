@@ -1,4 +1,4 @@
-package com.example.finalprojectkotlin.ui.editMovie
+package com.example.finalprojectkotlin.ui.manger.addmovie.editMovie
 
 import android.content.Intent
 import android.net.Uri
