@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.showallmovies.ShowMoviesFragment"
+    tools:context=".ui.manger.addmovie.showallmovies.ShowMoviesFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#1B1D20">
 

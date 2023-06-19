@@ -1,4 +1,4 @@
-package com.example.finalprojectkotlin.ui.moviedetails
+package com.example.finalprojectkotlin.ui.manger.addmovie.moviedetails
 
 import android.os.Bundle
 import android.view.LayoutInflater
