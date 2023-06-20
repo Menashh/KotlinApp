@@ -27,15 +27,18 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#BFAFDAFA"
             app:counterTextColor="@color/white"
+            android:hint="@string/add_movie_title"
+            android:textColorHint="#365780"
+            android:textColor="@color/hint_edittexst"
+            android:background="@drawable/custom_edittext"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:maxLength="40"
-                android:hint="@string/add_movie_title"
-                android:id="@+id/item_title"/>
+                android:id="@+id/item_title"
+                android:textColor="@color/text_edittexst"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -44,15 +47,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="#BFAFDAFA"
+            android:hint="@string/add_movie_year"
+            android:textColorHint="#365780"
+            android:textColor="@color/hint_edittexst"
+            android:background="@drawable/custom_edittext"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:maxLength="4"
-                android:hint="@string/add_movie_year"
                 android:id="@+id/item_year_release"
-                android:inputType="date"/>
+                android:inputType="date"
+                android:textColor="@color/text_edittexst"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,14 +66,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="#BFAFDAFA"
+            android:hint="@string/add_movie_genre"
+            android:textColorHint="#365780"
+            android:textColor="@color/hint_edittexst"
+            android:background="@drawable/custom_edittext"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:maxLength="8"
-                android:hint="@string/add_movie_genre"
-                android:id="@+id/item_genre" />
+                android:id="@+id/item_genre"
+                android:textColor="@color/text_edittexst"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,15 +84,18 @@
             android:layout_width="match_parent"
             android:layout_height="83dp"
             android:layout_marginTop="5dp"
-            android:background="#BFAFDAFA"
+            android:hint="@string/add_movie_description"
+            android:textColorHint="#365780"
+            android:textColor="@color/hint_edittexst"
+            android:background="@drawable/custom_edittext"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/item_description"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/add_movie_description"
                 android:scrollbars="vertical"
-                android:scrollbarStyle="outsideOverlay"/>
+                android:scrollbarStyle="outsideOverlay"
+                android:textColor="@color/text_edittexst"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -169,7 +181,8 @@
             android:id="@+id/finish_btn"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:backgroundTint="#2AD89999"/>
+            app:backgroundTint="#8BBDBEBF"
+            android:textColor="#BFAFDAFA"/>
 
 
     </LinearLayout>

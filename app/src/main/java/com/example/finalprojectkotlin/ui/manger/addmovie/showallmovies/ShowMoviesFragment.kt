@@ -5,6 +5,8 @@ import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
+import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -54,9 +56,11 @@ class ShowMoviesFragment:Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+
         // Setting observer on the user's actions and the matching responses
         viewModel.movies?.observe(viewLifecycleOwner) {
             binding.recycler.adapter = MovieAdapter(it, object : MovieAdapter.MovieListener {
+
 
                 override fun onItemClicked(index: Int) {
                     viewModel.setMovie(it[index])
@@ -128,6 +132,10 @@ class ShowMoviesFragment:Fragment() {
                     dialog.show()
                 }
             }).attachToRecyclerView(binding.recycler)
+        }
+
+        if(binding.recycler.size > 0){
+            binding.start.isVisible = false
         }
     }
 
