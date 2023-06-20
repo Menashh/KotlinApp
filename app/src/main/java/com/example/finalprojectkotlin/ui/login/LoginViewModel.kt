@@ -6,8 +6,6 @@ import com.example.finalprojectkotlin.data.repository.AuthRepository
 import com.example.finalprojectkotlin.util.Resource
 import kotlinx.coroutines.launch
 
-
-
 class LoginViewModel(private val authRep: AuthRepository) : ViewModel() {
 
     private val _userSignInStatus = MutableLiveData<Resource<User>>()

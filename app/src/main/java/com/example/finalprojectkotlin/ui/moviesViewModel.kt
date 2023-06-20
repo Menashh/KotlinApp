@@ -4,8 +4,10 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.example.finalprojectkotlin.data.model.Movie
 import com.example.finalprojectkotlin.data.repository.MovieRepository
+import kotlinx.coroutines.launch
 
 class moviesViewModel(application: Application)  : AndroidViewModel(application){
 
@@ -21,15 +23,21 @@ class moviesViewModel(application: Application)  : AndroidViewModel(application)
     }
 
     fun addMovie(item: Movie) {
-        repository.addMovie(item)
+        viewModelScope.launch {
+            repository.addMovie(item)
+        }
     }
 
     fun deleteMovie(item:Movie) {
-        repository.deleteMovie(item)
+        viewModelScope.launch {
+            repository.deleteMovie(item)
+        }
     }
 
     fun updateMovie(item: Movie){
-        repository.updateMovie(item)
+        viewModelScope.launch {
+            repository.updateMovie(item)
+        }
     }
 
 }

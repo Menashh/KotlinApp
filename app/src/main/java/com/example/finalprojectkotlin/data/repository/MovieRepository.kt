@@ -18,20 +18,20 @@ class MovieRepository(application: Application) {
 
     fun getMovies() = movieDao?.getMovies()
 
-    fun addMovie(item:Movie) {
+    suspend fun addMovie(item:Movie) {
         movieDao?.addMovie(item)
     }
 
-    fun deleteMovie(item: Movie) {
+    suspend fun deleteMovie(item: Movie) {
         movieDao?.deleteMovie(item)
     }
-    fun updateMovie(item: Movie){
+    suspend fun updateMovie(item: Movie){
         movieDao?.updateMovie(item)
     }
 
-    fun getMovie(id:Int)  = movieDao?.getMovie(id)
+    suspend fun getMovie(id:Int)  = movieDao?.getMovie(id)
 
-    fun deleteAll() {
+    suspend fun deleteAll() {
         movieDao?.deleteAll()
     }
 

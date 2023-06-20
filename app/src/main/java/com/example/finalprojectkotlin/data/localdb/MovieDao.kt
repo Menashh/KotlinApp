@@ -7,20 +7,20 @@ import com.example.finalprojectkotlin.data.model.Movie
 interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addMovie(item:Movie)
+    suspend fun addMovie(item:Movie)
 
     @Delete
-    fun deleteMovie(item:Movie)
+    suspend fun deleteMovie(item:Movie)
 
     @Update
-    fun updateMovie(item: Movie)
+    suspend fun updateMovie(item: Movie)
 
     @Query("SELECT * FROM movies ORDER BY content ASC")
     fun getMovies() : LiveData<List<Movie>>
 
     @Query("SELECT * FROM movies WHERE id =:id")
-    fun getMovie(id:Int) : Movie
+    suspend fun getMovie(id:Int) : Movie
 
     @Query("DELETE FROM movies")
-    fun deleteAll()
+    suspend fun deleteAll()
 }

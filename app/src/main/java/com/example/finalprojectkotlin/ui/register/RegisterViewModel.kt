@@ -22,7 +22,7 @@ class RegisterViewModel(private val repository: AuthRepository) : ViewModel() {
             _userRegistrationStatus.postValue(Resource.Error(it))
         }
         _userRegistrationStatus.value = Resource.Loading()
-        viewModelScope.launch {
+        viewModelScope.launch{
             val registrationResult = repository.createUser(email,password)
             _userRegistrationStatus.postValue(registrationResult)
         }
@@ -30,8 +30,6 @@ class RegisterViewModel(private val repository: AuthRepository) : ViewModel() {
     }
 
     class RegisterViewModelFactory(private val repo: AuthRepository) : ViewModelProvider.NewInstanceFactory() {
-
-
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             return RegisterViewModel(repo) as T
         }
