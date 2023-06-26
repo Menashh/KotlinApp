@@ -1,4 +1,4 @@
-package com.example.finalprojectkotlin.ui.manger.addmovie.showallmovies
+package com.example.finalprojectkotlin.ui.showallmovies
 
 import android.view.LayoutInflater
 import android.view.View
